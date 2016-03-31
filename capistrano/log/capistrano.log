@@ -1,0 +1,337 @@
+# Logfile created on 2016-03-31 11:48:42 +0530 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 11:48:42 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [aa8adf2c] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+  INFO [f9b1644e] Running /usr/bin/env mkdir -p /tmp/demo/ as deployer@localhost
+ DEBUG [aa8adf2c] Command: /usr/bin/env mkdir -p /tmp/demo/
+ DEBUG [f9b1644e] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [f9b1644e] Finished in 25.948 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [af253015] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh as deployer@localhost
+ DEBUG [af253015] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [af253015] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 11:50:37 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [94fd0794] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+ DEBUG [94fd0794] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [d46b7ece] Running /usr/bin/env mkdir -p /tmp/demo/ as deployer@localhost
+ DEBUG [d46b7ece] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [d46b7ece] Finished in 8.119 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [5d721a0b] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh as deployer@localhost
+ DEBUG [5d721a0b] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [5d721a0b] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 11:52:37 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b3d7fb40] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+ DEBUG [b3d7fb40] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [b3d7fb40] Finished in 5.991 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [ff5cd3a1] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh on 10.0.0.143
+ DEBUG [ff5cd3a1] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [ff5cd3a1] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [993d8183] Running /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git on 10.0.0.143
+ DEBUG [993d8183] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git )
+ DEBUG [993d8183] 	896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/develop
+20e7edf6f39ff3346b2e469bb16f2b949e8df4e3	refs/heads/master
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/stagging
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/testing
+  INFO [993d8183] Finished in 2.268 seconds with exit status 0 (successful).
+  INFO [7785f736] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [7785f736] Command: /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases
+  INFO [7785f736] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [d521d412] Running [ -f /home/webonise/deploy/priyanka/current/REVISION ] on 10.0.0.143
+ DEBUG [d521d412] Command: [ -f /home/webonise/deploy/priyanka/current/REVISION ]
+ DEBUG [d521d412] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [d026c68f] Running [ -f /home/webonise/deploy/priyanka/repo/HEAD ] on 10.0.0.143
+ DEBUG [d026c68f] Command: [ -f /home/webonise/deploy/priyanka/repo/HEAD ]
+ DEBUG [d026c68f] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [13782f09] Running if test ! -d /home/webonise/deploy/priyanka; then echo "Directory does not exist '/home/webonise/deploy/priyanka'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [13782f09] Command: if test ! -d /home/webonise/deploy/priyanka; then echo "Directory does not exist '/home/webonise/deploy/priyanka'" 1>&2; false; fi
+ DEBUG [13782f09] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [aa536e9c] Running /usr/bin/env git clone --mirror https://github.com/priyankagat-webonise/capistrano.git /home/webonise/deploy/priyanka/repo on 10.0.0.143
+ DEBUG [aa536e9c] Command: cd /home/webonise/deploy/priyanka && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git clone --mirror https://github.com/priyankagat-webonise/capistrano.git /home/webonise/deploy/priyanka/repo )
+ DEBUG [aa536e9c] 	Cloning into bare repository '/home/webonise/deploy/priyanka/repo'...
+  INFO [aa536e9c] Finished in 4.211 seconds with exit status 0 (successful).
+ DEBUG [66af0d65] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [66af0d65] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [66af0d65] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [84eeee29] Running /usr/bin/env git remote update --prune on 10.0.0.143
+ DEBUG [84eeee29] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [84eeee29] 	Fetching origin
+  INFO [84eeee29] Finished in 2.335 seconds with exit status 0 (successful).
+ DEBUG [eb621913] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [eb621913] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [eb621913] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c61920ca] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062246 on 10.0.0.143
+ DEBUG [c61920ca] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062246 )
+  INFO [c61920ca] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [31dc6612] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062246 on 10.0.0.143
+ DEBUG [31dc6612] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062246 )
+  INFO [31dc6612] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [7f014800] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [7f014800] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [7f014800] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c572a2c2] Running /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master on 10.0.0.143
+ DEBUG [c572a2c2] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master )
+ DEBUG [c572a2c2] 	20e7edf6f39f
+ DEBUG [c572a2c2] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [8ce17424] Running if test ! -d /home/webonise/deploy/priyanka/releases/20160331062246; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062246'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [8ce17424] Command: if test ! -d /home/webonise/deploy/priyanka/releases/20160331062246; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062246'" 1>&2; false; fi
+ DEBUG [8ce17424] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [de97c809] Running /usr/bin/env echo "20e7edf6f39f" >> REVISION on 10.0.0.143
+ DEBUG [de97c809] Command: cd /home/webonise/deploy/priyanka/releases/20160331062246 && /usr/bin/env echo "20e7edf6f39f" >> REVISION
+  INFO [de97c809] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [00294060] Running /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062246 /home/webonise/deploy/priyanka/releases/current on 10.0.0.143
+ DEBUG [00294060] Command: /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062246 /home/webonise/deploy/priyanka/releases/current
+  INFO [00294060] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [0274b92c] Running /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka on 10.0.0.143
+ DEBUG [0274b92c] Command: /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka
+  INFO [0274b92c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [e9a29f29] Running /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [e9a29f29] Command: /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases
+ DEBUG [e9a29f29] 	20160331062246
+ DEBUG [e9a29f29] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [c71d5e3a] Running if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [c71d5e3a] Command: if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi
+ DEBUG [c71d5e3a] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [74724056] Running /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062246 by webonise" >> /home/webonise/deploy/priyanka/revisions.log on 10.0.0.143
+ DEBUG [74724056] Command: cd /home/webonise/deploy/priyanka/releases && /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062246 by webonise" >> /home/webonise/deploy/priyanka/revisions.log
+  INFO [74724056] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 11:56:08 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a8a86294] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+ DEBUG [a8a86294] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [a8a86294] Finished in 7.322 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [97551f1f] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh on 10.0.0.143
+ DEBUG [97551f1f] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [97551f1f] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [3971a4b5] Running /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git on 10.0.0.143
+ DEBUG [3971a4b5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git )
+ DEBUG [3971a4b5] 	896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/develop
+20e7edf6f39ff3346b2e469bb16f2b949e8df4e3	refs/heads/master
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/stagging
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/testing
+  INFO [3971a4b5] Finished in 2.230 seconds with exit status 0 (successful).
+  INFO [e16ebe5b] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [e16ebe5b] Command: /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases
+  INFO [e16ebe5b] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [2189c235] Running [ -f /home/webonise/deploy/priyanka/current/REVISION ] on 10.0.0.143
+ DEBUG [2189c235] Command: [ -f /home/webonise/deploy/priyanka/current/REVISION ]
+ DEBUG [2189c235] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [80e5043f] Running /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null on 10.0.0.143
+ DEBUG [80e5043f] Command: /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null
+ DEBUG [80e5043f] 	20e7edf6f39f
+ DEBUG [80e5043f] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [efe3d600] Running [ -f /home/webonise/deploy/priyanka/repo/HEAD ] on 10.0.0.143
+ DEBUG [efe3d600] Command: [ -f /home/webonise/deploy/priyanka/repo/HEAD ]
+ DEBUG [efe3d600] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/webonise/deploy/priyanka/repo
+ DEBUG [06755cfb] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [06755cfb] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [06755cfb] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [b6b86621] Running /usr/bin/env git remote update --prune on 10.0.0.143
+ DEBUG [b6b86621] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b6b86621] 	Fetching origin
+  INFO [b6b86621] Finished in 2.380 seconds with exit status 0 (successful).
+ DEBUG [7e91698d] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [7e91698d] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [7e91698d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ce053c62] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062618 on 10.0.0.143
+ DEBUG [ce053c62] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062618 )
+  INFO [ce053c62] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [00601a3a] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062618 on 10.0.0.143
+ DEBUG [00601a3a] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062618 )
+  INFO [00601a3a] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [c13f77aa] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [c13f77aa] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [c13f77aa] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [4608d119] Running /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master on 10.0.0.143
+ DEBUG [4608d119] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master )
+ DEBUG [4608d119] 	20e7edf6f39f
+ DEBUG [4608d119] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [c5c1075b] Running if test ! -d /home/webonise/deploy/priyanka/releases/20160331062618; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062618'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [c5c1075b] Command: if test ! -d /home/webonise/deploy/priyanka/releases/20160331062618; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062618'" 1>&2; false; fi
+ DEBUG [c5c1075b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [9cd4e552] Running /usr/bin/env echo "20e7edf6f39f" >> REVISION on 10.0.0.143
+ DEBUG [9cd4e552] Command: cd /home/webonise/deploy/priyanka/releases/20160331062618 && /usr/bin/env echo "20e7edf6f39f" >> REVISION
+  INFO [9cd4e552] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [5d50fefe] Running /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062618 /home/webonise/deploy/priyanka/releases/current on 10.0.0.143
+ DEBUG [5d50fefe] Command: /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062618 /home/webonise/deploy/priyanka/releases/current
+  INFO [5d50fefe] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [9f1519c7] Running /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka on 10.0.0.143
+ DEBUG [9f1519c7] Command: /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka
+  INFO [9f1519c7] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [3b072883] Running /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [3b072883] Command: /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases
+ DEBUG [3b072883] 	20160331062246	20160331062618
+ DEBUG [3b072883] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [8a67c6a0] Running if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [8a67c6a0] Command: if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi
+ DEBUG [8a67c6a0] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [04970918] Running /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062618 by webonise" >> /home/webonise/deploy/priyanka/revisions.log on 10.0.0.143
+ DEBUG [04970918] Command: cd /home/webonise/deploy/priyanka/releases && /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062618 by webonise" >> /home/webonise/deploy/priyanka/revisions.log
+  INFO [04970918] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 11:56:37 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [aa386a19] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+ DEBUG [aa386a19] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [aa386a19] Finished in 6.032 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [bf36cbee] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh on 10.0.0.143
+ DEBUG [bf36cbee] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [bf36cbee] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [ae2f13b2] Running /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git on 10.0.0.143
+ DEBUG [ae2f13b2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git )
+ DEBUG [ae2f13b2] 	896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/develop
+20e7edf6f39ff3346b2e469bb16f2b949e8df4e3	refs/heads/master
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/stagging
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/testing
+  INFO [ae2f13b2] Finished in 2.256 seconds with exit status 0 (successful).
+  INFO [247cdf7c] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [247cdf7c] Command: /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases
+  INFO [247cdf7c] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [4d652f5e] Running [ -f /home/webonise/deploy/priyanka/current/REVISION ] on 10.0.0.143
+ DEBUG [4d652f5e] Command: [ -f /home/webonise/deploy/priyanka/current/REVISION ]
+ DEBUG [4d652f5e] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [d92dba4a] Running /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null on 10.0.0.143
+ DEBUG [d92dba4a] Command: /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null
+ DEBUG [d92dba4a] 	20e7edf6f39f
+ DEBUG [d92dba4a] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [4f3ff3a9] Running [ -f /home/webonise/deploy/priyanka/repo/HEAD ] on 10.0.0.143
+ DEBUG [4f3ff3a9] Command: [ -f /home/webonise/deploy/priyanka/repo/HEAD ]
+ DEBUG [4f3ff3a9] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/webonise/deploy/priyanka/repo
+ DEBUG [839a4417] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [839a4417] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [839a4417] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [10789021] Running /usr/bin/env git remote update --prune on 10.0.0.143
+ DEBUG [10789021] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [10789021] 	Fetching origin
+  INFO [10789021] Finished in 2.291 seconds with exit status 0 (successful).
+ DEBUG [bf779b84] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [bf779b84] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [bf779b84] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a05c92fc] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062645 on 10.0.0.143
+ DEBUG [a05c92fc] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331062645 )
+  INFO [a05c92fc] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [cd864035] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062645 on 10.0.0.143
+ DEBUG [cd864035] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331062645 )
+  INFO [cd864035] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [0184baa5] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [0184baa5] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [0184baa5] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [bfe692f0] Running /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master on 10.0.0.143
+ DEBUG [bfe692f0] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master )
+ DEBUG [bfe692f0] 	20e7edf6f39f
+ DEBUG [bfe692f0] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [a09e4397] Running if test ! -d /home/webonise/deploy/priyanka/releases/20160331062645; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062645'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [a09e4397] Command: if test ! -d /home/webonise/deploy/priyanka/releases/20160331062645; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331062645'" 1>&2; false; fi
+ DEBUG [a09e4397] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [18a202b0] Running /usr/bin/env echo "20e7edf6f39f" >> REVISION on 10.0.0.143
+ DEBUG [18a202b0] Command: cd /home/webonise/deploy/priyanka/releases/20160331062645 && /usr/bin/env echo "20e7edf6f39f" >> REVISION
+  INFO [18a202b0] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [1716cfde] Running /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062645 /home/webonise/deploy/priyanka/releases/current on 10.0.0.143
+ DEBUG [1716cfde] Command: /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331062645 /home/webonise/deploy/priyanka/releases/current
+  INFO [1716cfde] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [e5bc80fd] Running /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka on 10.0.0.143
+ DEBUG [e5bc80fd] Command: /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka
+  INFO [e5bc80fd] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [ff788589] Running /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [ff788589] Command: /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases
+ DEBUG [ff788589] 	20160331062246	20160331062618	20160331062645
+ DEBUG [ff788589] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [6c49ca66] Running if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [6c49ca66] Command: if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi
+ DEBUG [6c49ca66] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [ac20afb4] Running /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062645 by webonise" >> /home/webonise/deploy/priyanka/revisions.log on 10.0.0.143
+ DEBUG [ac20afb4] Command: cd /home/webonise/deploy/priyanka/releases && /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331062645 by webonise" >> /home/webonise/deploy/priyanka/revisions.log
+  INFO [ac20afb4] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-03-31 12:04:03 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fea48dfd] Running /usr/bin/env mkdir -p /tmp/demo/ on 10.0.0.143
+ DEBUG [fea48dfd] Command: /usr/bin/env mkdir -p /tmp/demo/
+  INFO [fea48dfd] Finished in 6.607 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/demo/git-ssh.sh 0.0%
+  INFO Uploading /tmp/demo/git-ssh.sh 100.0%
+  INFO [226f7d8d] Running /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh on 10.0.0.143
+ DEBUG [226f7d8d] Command: /usr/bin/env chmod +rx /tmp/demo/git-ssh.sh
+  INFO [226f7d8d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [47f617ec] Running /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git on 10.0.0.143
+ DEBUG [47f617ec] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://github.com/priyankagat-webonise/capistrano.git )
+ DEBUG [47f617ec] 	896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/develop
+20e7edf6f39ff3346b2e469bb16f2b949e8df4e3	refs/heads/master
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/stagging
+896b699e121b91e02d82fbb13d4d800dc6331b3c	refs/heads/testing
+  INFO [47f617ec] Finished in 2.310 seconds with exit status 0 (successful).
+  INFO [67739ec2] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [67739ec2] Command: /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/shared /home/webonise/deploy/priyanka/releases
+  INFO [67739ec2] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [efca9173] Running [ -f /home/webonise/deploy/priyanka/current/REVISION ] on 10.0.0.143
+ DEBUG [efca9173] Command: [ -f /home/webonise/deploy/priyanka/current/REVISION ]
+ DEBUG [efca9173] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [d1eaa61c] Running /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null on 10.0.0.143
+ DEBUG [d1eaa61c] Command: /usr/bin/env cat /home/webonise/deploy/priyanka/current/REVISION 2>/dev/null
+ DEBUG [d1eaa61c] 	20e7edf6f39f
+ DEBUG [d1eaa61c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [006eb78b] Running [ -f /home/webonise/deploy/priyanka/repo/HEAD ] on 10.0.0.143
+ DEBUG [006eb78b] Command: [ -f /home/webonise/deploy/priyanka/repo/HEAD ]
+ DEBUG [006eb78b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/webonise/deploy/priyanka/repo
+ DEBUG [ad3307ca] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [ad3307ca] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [ad3307ca] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [6fd03de2] Running /usr/bin/env git remote update --prune on 10.0.0.143
+ DEBUG [6fd03de2] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6fd03de2] 	Fetching origin
+  INFO [6fd03de2] Finished in 2.452 seconds with exit status 0 (successful).
+ DEBUG [56886ca8] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [56886ca8] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [56886ca8] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [1a96029a] Running /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331063413 on 10.0.0.143
+ DEBUG [1a96029a] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env mkdir -p /home/webonise/deploy/priyanka/releases/20160331063413 )
+  INFO [1a96029a] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [29fd1644] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331063413 on 10.0.0.143
+ DEBUG [29fd1644] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/deploy/priyanka/releases/20160331063413 )
+  INFO [29fd1644] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [0561c78c] Running if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [0561c78c] Command: if test ! -d /home/webonise/deploy/priyanka/repo; then echo "Directory does not exist '/home/webonise/deploy/priyanka/repo'" 1>&2; false; fi
+ DEBUG [0561c78c] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1a4e7d78] Running /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master on 10.0.0.143
+ DEBUG [1a4e7d78] Command: cd /home/webonise/deploy/priyanka/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/demo/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 --abbrev-commit --abbrev=12 master )
+ DEBUG [1a4e7d78] 	20e7edf6f39f
+ DEBUG [1a4e7d78] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [b0b00775] Running if test ! -d /home/webonise/deploy/priyanka/releases/20160331063413; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331063413'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [b0b00775] Command: if test ! -d /home/webonise/deploy/priyanka/releases/20160331063413; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases/20160331063413'" 1>&2; false; fi
+ DEBUG [b0b00775] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [04bc9371] Running /usr/bin/env echo "20e7edf6f39f" >> REVISION on 10.0.0.143
+ DEBUG [04bc9371] Command: cd /home/webonise/deploy/priyanka/releases/20160331063413 && /usr/bin/env echo "20e7edf6f39f" >> REVISION
+  INFO [04bc9371] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [90b0921f] Running /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331063413 /home/webonise/deploy/priyanka/releases/current on 10.0.0.143
+ DEBUG [90b0921f] Command: /usr/bin/env ln -s /home/webonise/deploy/priyanka/releases/20160331063413 /home/webonise/deploy/priyanka/releases/current
+  INFO [90b0921f] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [1bf12d34] Running /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka on 10.0.0.143
+ DEBUG [1bf12d34] Command: /usr/bin/env mv /home/webonise/deploy/priyanka/releases/current /home/webonise/deploy/priyanka
+  INFO [1bf12d34] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [24ac01ca] Running /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases on 10.0.0.143
+ DEBUG [24ac01ca] Command: /usr/bin/env ls -xtr /home/webonise/deploy/priyanka/releases
+ DEBUG [24ac01ca] 	20160331062246	20160331062618	20160331062645	20160331063413
+ DEBUG [24ac01ca] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [543e7088] Running if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi on 10.0.0.143
+ DEBUG [543e7088] Command: if test ! -d /home/webonise/deploy/priyanka/releases; then echo "Directory does not exist '/home/webonise/deploy/priyanka/releases'" 1>&2; false; fi
+ DEBUG [543e7088] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [cd0bc480] Running /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331063413 by webonise" >> /home/webonise/deploy/priyanka/revisions.log on 10.0.0.143
+ DEBUG [cd0bc480] Command: cd /home/webonise/deploy/priyanka/releases && /usr/bin/env echo "Branch master (at 20e7edf6f39f) deployed as release 20160331063413 by webonise" >> /home/webonise/deploy/priyanka/revisions.log
+  INFO [cd0bc480] Finished in 0.007 seconds with exit status 0 (successful).
